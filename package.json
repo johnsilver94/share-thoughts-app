@@ -1,23 +1,49 @@
 {
-  "name": "share-thoughts-app",
-  "version": "1.0.0",
-  "description": "A fulstack social media app using MongoDB, Express,Node, React and GraphQL.",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon index"
-  },
-  "repository": "https://github.com/johnsilver94/share-thoughts-app.git",
-  "keywords": [],
-  "author": "Ion Cretu <cretuion94@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "apollo-server": "^2.19.0",
-    "bcryptjs": "^2.4.3",
-    "graphql": "^15.4.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.14"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+	"name": "share-thoughts-app",
+	"version": "0.0.1",
+	"description": "A fulstack social media app using MongoDB, Express,Node, React and GraphQL.",
+	"private": true,
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"dev": "lerna run dev --stream",
+		"prod": "lerna run prod --stream",
+		"build": "lerna run build --stream",
+		"lint": "lerna run lint --stream",
+		"prettier": "lerna run prettier --stream"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint"
+		}
+	},
+	"repository": "https://github.com/johnsilver94/share-thoughts-app.git",
+	"bugs": {
+		"url": "https://github.com/johnsilver94/share-thoughts-app/issues"
+	},
+	"homepage": "https://github.com/johnsilver94/share-thoughts-app#readme",
+	"keywords": [
+		"yarn",
+		"nodemon",
+		"eslint",
+		"prettier",
+		"graphql",
+		"apollo",
+		"apollo-server",
+		"typescript",
+		"mongo",
+		"docker",
+		"docker-compose"
+	],
+	"author": "Ion Cretu <cretuion94@gmail.com>",
+	"license": "MIT",
+	"engines": {
+		"yarn": ">=1.22.10",
+		"node": ">=15.0.1",
+		"npm": ">=7.0.11"
+	},
+	"devDependencies": {
+		"husky": "^4.3.0",
+		"lerna": "^3.22.1"
+	},
+	"dependencies": {}
 }
