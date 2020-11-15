@@ -21,7 +21,7 @@ function generateToken(user: IUser) {
 	);
 }
 
-const userResolver = {
+const usersResolver = {
 	Mutation: {
 		async login(
 			_: any,
@@ -102,4 +102,4 @@ const userResolver = {
 	},
 };
 
-export { userResolver };
+export { usersResolver };

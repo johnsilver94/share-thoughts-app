@@ -1,13 +1,16 @@
-import { ApolloServer } from "apollo-server";
+import { ApolloServer, PubSub } from "apollo-server";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 import { typeDefs } from "./graphql/typeDefs";
 import { resolvers } from "./graphql/resolvers";
 
+const pubSub = new PubSub();
+
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
+	context: ({ req }) => ({ req, pubSub }),
 });
 
 const PORT = process.env.PORT || 4000;

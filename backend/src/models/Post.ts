@@ -1,11 +1,13 @@
 import { model, Schema, Document } from "mongoose";
 
 interface IPost extends Document {
-	body: String;
-	username: String;
-	createdAt: String;
-	comments: [body: String, username: String, createdAt: String];
-	likes: [username: String, createdAt: String];
+	body: string;
+	username: string;
+	createdAt: string;
+	comments: any[];
+	likes: any[];
+	// comments: [{ body: string; username: string; createdAt: string }];
+	// likes: [{ username: string; createdAt: string }];
 	user: Schema.Types.ObjectId;
 }
 
