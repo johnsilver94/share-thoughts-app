@@ -36,7 +36,7 @@ const postsResolver = {
 			}
 			const newPost = new Post({
 				body,
-				user: user.ids,
+				user: user.,
 				username: user.username,
 				createdAt: new Date().toISOString(),
 			});
