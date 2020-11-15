@@ -9,7 +9,7 @@
 		"prod": "set NODE_ENV=production&&node dist/server.js",
 		"build": "tsc --pretty",
 		"build:types": "tsc --emitDeclarationOnly",
-		"lint": "eslint **/*.{ts,js} --fix",
+		"lint": "eslint src/**/*.{ts,js} --fix",
 		"prettier": "prettier **/*.{ts,js} --write ."
 	},
 	"husky": {
@@ -18,7 +18,7 @@
 		}
 	},
 	"lint-staged": {
-		"**/*.{ts,js}": [
+		"src/**/*.{ts,js}": [
 			"yarn lint",
 			"yarn prettier",
 			"git add"
