@@ -5,6 +5,7 @@
 	"private": true,
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
+		"hoist": "lerna bootstrap --hoist",
 		"dev": "lerna run dev --stream",
 		"prod": "lerna run prod --stream",
 		"build": "lerna run build --stream",
